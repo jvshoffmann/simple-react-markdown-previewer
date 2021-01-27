@@ -2,6 +2,10 @@ import React from 'react';
 import './App.css';
 import marked from 'marked';
 
+marked.setOptions({
+  breaks: true
+});
+
 const renderer = new marked.Renderer();
 marked.setOptions({
   renderer:renderer
@@ -56,7 +60,7 @@ const Editor = props => {
 \`\`\`
 1. list1
 2. list2
->block quote
+>block quote   
 
 ![image](https://icon-library.com/images/thumbs-up-png-icon/thumbs-up-png-icon-13.jpg)
 **bolded text**
